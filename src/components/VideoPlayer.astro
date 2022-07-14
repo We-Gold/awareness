@@ -1,0 +1,19 @@
+---
+export interface Props {
+	title: string;
+    url: string;
+}
+
+const { title, url } = Astro.props as Props;
+---
+
+<iframe src={url} title={title} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<style>
+    iframe {
+        aspect-ratio: 560/315;
+        width: 100%;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+</style>
