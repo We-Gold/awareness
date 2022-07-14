@@ -1,0 +1,42 @@
+---
+export interface Props {
+	author: string;
+}
+
+const { author } = Astro.props as Props;
+---
+
+<blockquote>
+    <slot/>
+    <span>{author}</span>
+</blockquote>
+
+<style>
+    blockquote {
+        border-left: 10px solid #ccc;
+        margin: 1.5em 0;
+        padding: 0.4em 15px;
+        quotes: "\201C""\201D""\2018""\2019";
+    }
+
+    blockquote:before {
+        color: #ccc;
+        content: open-quote;
+        font-size: 4em;
+        line-height: 0.1em;
+        margin-right: 0.15em;
+        vertical-align: -0.4em;
+    }
+
+    blockquote span {
+        display: block;
+        font-weight: bold;
+        font-style: italic;
+        margin-top: 0.2rem;
+    }
+
+    blockquote span:before {
+        color: black;
+        content: '- '
+    }
+</style>

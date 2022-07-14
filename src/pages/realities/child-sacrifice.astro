@@ -1,10 +1,20 @@
 ---
+import Quote from "../../components/Quote.astro";
 import VideoPlayer from "../../components/VideoPlayer.astro";
 import RealityLayout from "../../layouts/RealityLayout.astro";
 ---
 
 <RealityLayout title="Child Sacrifice - Awareness">
     <h1>Child Sacrifice</h1>
+
+    <i>The following quote is from the video embedded at the bottom of this page.</i>
+    
+    <Quote author="Annie Ikpa">
+        <span>The [twin brothers] went off to buy soap with their uncle. The uncle led them into a bush. </span>
+        <p>And cut off the head of one of the twin boys, while the other one watched. 
+        And then removed his genitals and left him in a pool of his own blood.
+        And the other boy ran away.</p>
+    </Quote>
 
     <p>Child sacrifice has a long history spanning many continents and cultures.</p>
     <p>Currently, child sacrifice is most common in Africa, specifically in Uganda.</p>
@@ -39,7 +49,3 @@ import RealityLayout from "../../layouts/RealityLayout.astro";
     <VideoPlayer title="Video: How I Fought To Ban Child Sacrifice In Uganda" url="https://www.youtube-nocookie.com/embed/VQTNB4ROSlI"></VideoPlayer>
     
 </RealityLayout>
-
-<style>
-	
-</style>
