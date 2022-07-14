@@ -1,17 +1,26 @@
 ---
 import HomeLayout from "../layouts/HomeLayout.astro";
 import SelectRandomButton from "../components/SelectRandomButton.astro";
+import FeaturedItem from "../components/FeaturedItem.astro";
 ---
 
 <HomeLayout title="Awareness">
 	<main>
 		<h1>Awareness...</h1>
 
-		<p>The world is full of problems. What hidden realities are you unaware of?</p>
+		<p>The world is full of problems. What realities are you unaware of?</p>
 
 		<SelectRandomButton></SelectRandomButton>
 
-		<h2>Or Discover One of Our Recommended Readings</h2>
+		<h2>Or Select One of Our Recommended Readings</h2>
+
+		<div>
+			<FeaturedItem 
+				title="Child Sacrifice" 
+				description="Learn about the illegal practice of sacrificing children for prosperity." 
+				pageName="child-sacrifice">
+			</FeaturedItem>
+		</div>		
 	</main>
 </HomeLayout>
 
@@ -29,5 +38,11 @@ import SelectRandomButton from "../components/SelectRandomButton.astro";
 		margin: auto;
 		padding: 1em;
 		max-width: 60ch;
+	}
+
+	div {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 0.75rem;
 	}
 </style>

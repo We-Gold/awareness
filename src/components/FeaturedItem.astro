@@ -1,0 +1,44 @@
+---
+export interface Props {
+	title: string;
+    pageName: string;
+    description: string;
+}
+
+const { title, pageName, description } = Astro.props as Props;
+---
+
+<a href={`/awareness/realities/${pageName}`}>
+    <h3><strong>{title}</strong></h3>
+    <hr>
+    <p>{description}</p>
+</a>
+
+<style>
+    a {
+        display: block;
+        text-decoration: none;
+        color: black;
+        border-radius: 0.3rem;
+        box-shadow: 2px 3px 8px rgb(0, 0, 0, 0.2);
+        padding-left: 1rem;
+        padding-right: 1rem;
+        transition-duration: 0.3s;
+    }
+
+    a > p {
+        margin: 0.75rem 0;
+    }
+
+    a > h3 {
+        margin: 0.75rem 0;
+    }
+
+    a > hr {
+        border: 1px solid rgb(204, 204, 204);
+    }
+
+    a:hover {
+        box-shadow: 2px 3px 8px rgb(0, 0, 0, 0.35);
+    }
+</style>
