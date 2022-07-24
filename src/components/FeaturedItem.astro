@@ -8,7 +8,7 @@ export interface Props {
 const { title, pageName, description } = Astro.props as Props;
 ---
 
-<a href={`/awareness/realities/${pageName}`}>
+<a href={`/awareness/realities/${pageName}`} rel="prefetch">
     <h3><strong>{title}</strong></h3>
     <hr>
     <p>{description}</p>

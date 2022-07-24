@@ -16,17 +16,14 @@ const { title } = Astro.props as Props;
 		<link rel="icon" type="image/x-icon" href="/awareness/favicon.ico" />
 		<title>{title}</title>
 		<meta name="description" content="Discover problems you never new the world has. Awareness contains various articles about issues that plague humanity.">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 	</head>
 	<body>
 		<slot />
 		<footer>
 			<hr>
 			<div>
-				<a href="/awareness/">Home</a>
-				<a href="/awareness/transparency">Transparency Statement</a>
+				<a href="/awareness/" rel="prefetch">Home</a>
+				<a href="/awareness/transparency" rel="prefetch">Transparency Statement</a>
 			</div>
 			<BelowFooter></BelowFooter>
 		</footer>
